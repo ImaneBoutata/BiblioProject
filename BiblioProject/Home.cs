@@ -17,14 +17,14 @@ namespace BiblioProject
             InitializeComponent();
         }
 
-
+     public   ClientInterface clientInterface;
         int t1 = 45;
         
 
         
         private void button1_Click(object sender, EventArgs e)
         {
-
+            panelClient.Visible = true;
         }
 
         private void button3_MouseHover(object sender, EventArgs e)
@@ -63,6 +63,33 @@ namespace BiblioProject
         private void pictureBox4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelClient_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        
+        private void Home_Shown(object sender, EventArgs e)
+        {
+            clientInterface.Display();
+            
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            ClientInterface clientInterface = new ClientInterface(this);
+            clientInterface.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)

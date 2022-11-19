@@ -40,7 +40,7 @@ namespace BiblioProject
            {
                if (login == "Admin" && password == "1234")
                {
-                   ClientInterface home = new ClientInterface();
+                   Home home = new Home();
                    
                    home.Show();
                    this.Hide();

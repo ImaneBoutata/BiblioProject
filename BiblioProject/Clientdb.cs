@@ -121,6 +121,7 @@ namespace BiblioProject
             MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
             DataTable tbl = new DataTable();
             adp.Fill(tbl);
+            dgv.DataSource= tbl;
             con.Close();
 
 

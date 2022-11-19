@@ -5,13 +5,20 @@ namespace BiblioProject
     public partial class ClientInterface : Form
     {
 
-        //private readonly Client _parent;
-        public ClientInterface()
+        private readonly Home _parent;
+        string m;
+
+        public ClientInterface(Home parent)
         {
             InitializeComponent();
+            _parent = parent;
             //_parent = parent;
         }
 
+        public void Display()
+        {
+            //Clientdb.DisplayAndSearch("SELECT  ID,Nom,Prenom,Cin FROM CLIENT", dataGridView);
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -91,7 +98,7 @@ namespace BiblioProject
                 Clientdb.AddClient(c);
                 Clear();  
             }
-            //_parent.Display();
+            Display();
         }
     }
 }
