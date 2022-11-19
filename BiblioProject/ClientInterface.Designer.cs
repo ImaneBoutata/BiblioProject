@@ -92,6 +92,7 @@
             this.Controls.Add(this.prenomBox);
             this.Controls.Add(this.nomBox);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClientInterface";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

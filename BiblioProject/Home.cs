@@ -19,9 +19,7 @@ namespace BiblioProject
 
 
         int t1 = 45;
-        int t2 = 45;
-        int t3 = 45;
-        int t4 = 45;
+        
 
         
         private void button1_Click(object sender, EventArgs e)
@@ -37,10 +35,7 @@ namespace BiblioProject
 
         private void button3_MouseLeave(object sender, EventArgs e)
         {
-            timer1.Stop();
-            this.panelImane.Size = panel5.Size;
-
-            t1 = 45;
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -68,6 +63,14 @@ namespace BiblioProject
         private void pictureBox4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            this.panelImane.Size = panel5.Size;
+
+            t1 = 45;
         }
     }
 }
