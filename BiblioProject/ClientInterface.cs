@@ -6,7 +6,7 @@ namespace BiblioProject
     {
 
         private readonly Home _parent;
-        //private DataGridView dataGridView;
+        string m;
 
         public ClientInterface(Home parent)
         {
@@ -17,7 +17,7 @@ namespace BiblioProject
 
         public void Display()
         {
-            Clientdb.DisplayAndSearch("SELECT  ID,Nom,Prenom,Cin FROM CLIENT", dataGridView);
+            //Clientdb.DisplayAndSearch("SELECT  ID,Nom,Prenom,Cin FROM CLIENT", dataGridView);
         }
 
         private void Form1_Load(object sender, EventArgs e)
