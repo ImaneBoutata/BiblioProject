@@ -10,17 +10,17 @@ namespace BiblioProject
     {
         String nom;
         String prenom;
-        String cin;
+        String CIN;
 
         public Client(string nom, string prenom, string cin)
         {
             this.nom = nom;
             this.prenom = prenom;
-            this.cin = cin;
+            this.CIN = cin;
         }
 
         public string Nom { get => nom; set => nom = value; }
         public string Prenom { get => prenom; set => prenom = value; }
-        public string Cin { get => cin; set => cin = value; }
+        public string Cin { get => CIN; set => CIN = value; }
     }
 }

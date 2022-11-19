@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BiblioProject
 {
@@ -12,34 +13,20 @@ namespace BiblioProject
         public static MySqlConnection GetConnection()
         {
             // string sql = "datasource=localhost;port=3306;username=root;password=;database=biblio";
-            /*  string sql = "server=localhost;database=biblio;uid=root;pwd=\"\";";
-              MySqlConnection conn = new MySqlConnection(sql);
-              try
-              {
-                  conn.Open();
-              }
-              catch (MySqlException ex)
-              {
-
-                  MessageBox.Show("MySql connection !" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-              }
-              return conn;*/
-            string connetionString = null;
-            MySqlConnection cnn;
-            connetionString = "server=localhost;database=biblio;uid=root;pwd=\"\";";
-            cnn = new MySqlConnection(connetionString);
+            string sql = "datasource=localhost;port=3306;username=root;password=;database=biblio";
+            MySqlConnection conn = new MySqlConnection(sql);
             try
             {
-                cnn.Open();
-                MessageBox.Show("Connection Open ! ");
-                cnn.Close();
+                conn.Open();
             }
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
-                MessageBox.Show("Can not open connection ! ");
+
+                MessageBox.Show("MySql connection !" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
-        return cnn;
+            return conn;
+
         }
 
 
