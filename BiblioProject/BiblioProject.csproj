@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Guna.UI.WinForms" Version="2.0.3.3" />
     <PackageReference Include="MySql.Data" Version="8.0.31" />
   </ItemGroup>
 
