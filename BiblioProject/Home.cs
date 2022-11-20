@@ -12,9 +12,13 @@ namespace BiblioProject
 {
     public partial class Home : Form
     {
+        ClientInterface ClientInterface;
+        string m;
+
         public Home()
         {
             InitializeComponent();
+            clientInterface = new ClientInterface(this);
         }
 
         public void Display()
@@ -79,7 +83,10 @@ namespace BiblioProject
         {
 
         }
-
+        public void Display()
+        {
+            Clientdb.DisplayAndSearch("SELECT  ID,Nom,Prenom,Cin FROM CLIENT", dataGridView);
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -93,8 +100,9 @@ namespace BiblioProject
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            ClientInterface clientInterface = new ClientInterface(this);
-            clientInterface.Show();
+            //ClientInterface clientInterface = new ClientInterface(this);
+            clientInterface.Clear();
+            clientInterface.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -110,9 +118,42 @@ namespace BiblioProject
             Display();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            Clientdb.DisplayAndSearch("SELECT  ID,Nom,Prenom,Cin FROM CLIENT where cin like '%"+  textSearch.Text+ "%' ", dataGridView);
+        }
 
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 0)
+            {
+                //Edit
+                clientInterface.Clear();
+                clientInterface.id = dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
+                clientInterface.nom = dataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+                clientInterface.prenom = dataGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
+                clientInterface.CIN = dataGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
+                clientInterface.UpdateInfo();
+                clientInterface.ShowDialog();
+
+
+
+
+                return;
+            }
+            if(e.ColumnIndex == 1)
+
+                //Delete
+            {
+               if( MessageBox.Show("Vous voulez vraiment supprimer ce client ?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    Clientdb.DeleteClient(dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    Display();
+                }
+
+
+                return;
+            }
         }
     }
 }

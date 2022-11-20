@@ -45,11 +45,11 @@ namespace BiblioProject
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Added Sucessfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ajoutation avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }catch (MySqlException ex)
             {
-                MessageBox.Show("Client not insert. " + ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Client non ajouter. " + ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             conn.Close();
@@ -58,12 +58,13 @@ namespace BiblioProject
 
 
 
-        public static void UpdateClient(Client c,int id)
+        public static void UpdateClient(Client c,string id)
         {
             string sql = "Update CLIENT SET nom=@nom,prenom=@prenom,CIN=@CIN where id=@clientId";
             MySqlConnection conn = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, conn);
-            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@Clientid", MySqlDbType.VarChar).Value = id;
             cmd.Parameters.Add("@nom", MySqlDbType.VarChar).Value = c.Nom;
             cmd.Parameters.Add("@prenom", MySqlDbType.VarChar).Value = c.Prenom;
             cmd.Parameters.Add("@CIN", MySqlDbType.VarChar).Value = c.Cin;
@@ -72,12 +73,12 @@ namespace BiblioProject
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Updated Sucessfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Modification avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Client not update. " + ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Client non modifier" + ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             conn.Close();
@@ -87,7 +88,7 @@ namespace BiblioProject
         }
 
 
-        public static void DeleteClient(int id)
+        public static void DeleteClient(string id)
         {
             string sql = "DELETE from  CLIENT where id=@clientId";
             MySqlConnection conn = GetConnection();
@@ -99,12 +100,12 @@ namespace BiblioProject
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("delete it  Sucessfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Client supprimer avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Client not delete. " + ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Client non supprimer " + ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             conn.Close();

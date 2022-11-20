@@ -48,6 +48,7 @@
             this.MotdepasseBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MotdepasseBox.Location = new System.Drawing.Point(637, 259);
             this.MotdepasseBox.Name = "MotdepasseBox";
+            this.MotdepasseBox.PasswordChar = '*';
             this.MotdepasseBox.PlaceholderText = "Mot de passe";
             this.MotdepasseBox.Size = new System.Drawing.Size(131, 24);
             this.MotdepasseBox.TabIndex = 1;
