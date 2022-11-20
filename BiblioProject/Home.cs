@@ -17,7 +17,12 @@ namespace BiblioProject
             InitializeComponent();
         }
 
-     public   ClientInterface clientInterface;
+        public void Display()
+        {
+            Clientdb.DisplayAndSearch("SELECT  ID,Nom,Prenom,Cin FROM CLIENT", dataGridView);
+        }
+
+        public   ClientInterface clientInterface;
         int t1 = 45;
         
 
@@ -82,7 +87,7 @@ namespace BiblioProject
         
         private void Home_Shown(object sender, EventArgs e)
         {
-            clientInterface.Display();
+            Display();
             
         }
 
@@ -98,6 +103,16 @@ namespace BiblioProject
             this.panelImane.Size = panel5.Size;
 
             t1 = 45;
+        }
+
+        private void Home_Shown_1(object sender, EventArgs e)
+        {
+            Display();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

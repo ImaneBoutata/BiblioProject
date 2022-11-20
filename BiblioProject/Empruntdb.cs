@@ -123,12 +123,38 @@ namespace BiblioProject
             MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
             DataTable tbl = new DataTable();
             adp.Fill(tbl);
+            dgv.DataSource = tbl;
             con.Close();
-
-
 
         }
 
+        public static void DisplayComboBox(string query, ComboBox c)
+        {
+            /* string sql = query;
+             MySqlConnection con = GetConnection();
+             MySqlCommand cmd = new MySqlCommand(sql, con);
+             MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+             DataTable tbl = new DataTable();
+             adp.Fill(tbl);
+             c.DataSource = tbl;
+             con.Close();*/
+            MySqlConnection con = GetConnection();
+
+            //String command_query = "SELECT CIN FROM CLIENT";
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            MySqlDataReader mydr= cmd.ExecuteReader();
+           
+                while (mydr.Read())
+                {
+                    //string subj = mydr.GetString("CIN");
+                    //c.Items.Add(subj);
+                    c.Items.Add(mydr.GetString("cin")); 
+                }
+                
+           
+
+
+        }
 
 
     }
