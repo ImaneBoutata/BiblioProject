@@ -13,6 +13,7 @@ namespace BiblioProject
     public partial class Home : Form
     {
         ClientInterface ClientInterface;
+        string m;
 
         public Home()
         {
