@@ -12,6 +12,7 @@ namespace BiblioProject
 {
     public partial class ListeCdInterface : Form
     {
+        string m;
         public ListeCdInterface()
         {
             InitializeComponent();
