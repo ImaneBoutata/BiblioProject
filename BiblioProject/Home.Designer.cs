@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panelClient = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.addBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -50,16 +52,17 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -76,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +87,8 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.guna2CustomGradientPanel1);
             this.panel1.Controls.Add(this.panelClient);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel6);
@@ -92,6 +98,21 @@
             this.panel1.Size = new System.Drawing.Size(1529, 847);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.Location = new System.Drawing.Point(370, 147);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1000, 549);
+            this.panel7.TabIndex = 5;
+            // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(388, 177);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(0, 0);
+            this.guna2CustomGradientPanel1.TabIndex = 4;
             // 
             // panelClient
             // 
@@ -276,14 +297,15 @@
             this.panelImane.Controls.Add(this.pictureBox3);
             this.panelImane.Controls.Add(this.pictureBox2);
             this.panelImane.Controls.Add(this.pictureBox1);
+            this.panelImane.Controls.Add(this.button3);
             this.panelImane.Controls.Add(this.button9);
             this.panelImane.Controls.Add(this.button8);
             this.panelImane.Controls.Add(this.button7);
-            this.panelImane.Controls.Add(this.button3);
-            this.panelImane.Location = new System.Drawing.Point(2, 145);
+            this.panelImane.Location = new System.Drawing.Point(9, 148);
             this.panelImane.Name = "panelImane";
-            this.panelImane.Size = new System.Drawing.Size(252, 308);
+            this.panelImane.Size = new System.Drawing.Size(252, 304);
             this.panelImane.TabIndex = 2;
+            this.panelImane.Paint += new System.Windows.Forms.PaintEventHandler(this.panelImane_Paint);
             // 
             // pictureBox3
             // 
@@ -315,6 +337,22 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Control;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Sitka Text", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(-7, -2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(255, 83);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Ouvrage";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
+            this.button3.MouseHover += new System.EventHandler(this.button3_MouseHover);
+            // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.SystemColors.Control;
@@ -327,6 +365,7 @@
             this.button9.TabIndex = 7;
             this.button9.Text = "CD";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -340,6 +379,7 @@
             this.button8.TabIndex = 6;
             this.button8.Text = "Périodique";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -353,22 +393,6 @@
             this.button7.TabIndex = 5;
             this.button7.Text = "Livre";
             this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Control;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Sitka Text", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(-2, -3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(255, 73);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Ouvrage";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
-            this.button3.MouseHover += new System.EventHandler(this.button3_MouseHover);
             // 
             // button2
             // 
@@ -409,6 +433,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1529, 95);
             this.panel6.TabIndex = 2;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // pictureBox4
             // 
@@ -437,10 +462,22 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Controls.Add(this.panel2);
             this.panel5.Location = new System.Drawing.Point(304, 246);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(252, 78);
             this.panel5.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Location = new System.Drawing.Point(840, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(0, 0);
+            this.panel2.TabIndex = 4;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // timer1
             // 
@@ -495,6 +532,7 @@
             this.Controls.Add(this.panel4);
             this.Name = "Home";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.Shown += new System.EventHandler(this.Home_Shown_1);
             this.panel1.ResumeLayout(false);
             this.panelClient.ResumeLayout(false);
@@ -509,6 +547,7 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -538,16 +577,19 @@
         private PictureBox pictureBox4;
         private Label label1;
         private Guna.UI2.WinForms.Guna2Panel panelClient;
-        private PictureBox pictureBox5;
-        private TextBox textSearch;
-        private DataGridView dataGridView;
-        private Guna.UI2.WinForms.Guna2Button addBtn;
         private Label label2;
+        private Guna.UI2.WinForms.Guna2Button addBtn;
+        private DataGridView dataGridView;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewButtonColumn Column6;
         private DataGridViewButtonColumn Column7;
+        private PictureBox pictureBox5;
+        private TextBox textSearch;
+        private Panel panel2;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Panel panel7;
     }
 }

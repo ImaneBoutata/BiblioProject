@@ -12,7 +12,7 @@ namespace BiblioProject
         String numero;
         String periodicite;
 
-        public Periodique(  String nom, String numero, String periodicite)
+        public Periodique( String nom, String numero, String periodicite) 
         {
             this.nom = nom;
             this.numero= numero;

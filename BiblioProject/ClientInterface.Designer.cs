@@ -36,6 +36,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textForm = new System.Windows.Forms.Label();
             this.annulerBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +68,7 @@
             this.cinBox.BackColor = System.Drawing.Color.White;
             this.cinBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cinBox.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cinBox.Location = new System.Drawing.Point(750, 199);
+            this.cinBox.Location = new System.Drawing.Point(568, 360);
             this.cinBox.Name = "cinBox";
             this.cinBox.PlaceholderText = "CIN";
             this.cinBox.Size = new System.Drawing.Size(301, 38);
@@ -136,6 +137,15 @@
             this.annulerBtn.Text = "Annuler";
             this.annulerBtn.Click += new System.EventHandler(this.annulerBtn_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(426, 108);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(89, 33);
+            this.comboBox1.TabIndex = 12;
+            this.comboBox1.Text = "Text";
+            // 
             // ClientInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -143,6 +153,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1005, 550);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.annulerBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ajouterBtn);
@@ -169,5 +180,6 @@
         private Panel panel1;
         private Label textForm;
         private Guna.UI2.WinForms.Guna2Button annulerBtn;
+        private ComboBox comboBox1;
     }
 }

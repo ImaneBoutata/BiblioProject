@@ -12,20 +12,25 @@ namespace BiblioProject
 {
     public partial class Home : Form
     {
-       // ClientInterface ClientInterface;
+        //ClientInterface ClientInterface;
+       // CdInterface cdInterface;
+
 
         public Home()
         {
             InitializeComponent();
-            //clientInterface = new ClientInterface(this);
+            clientInterface = new ClientInterface(this);
+           listecd = new ListeCdInterface();
+           listelivre = new ListeLivreInterface();
+            listeper=new ListePeriodiqueInterface();    
+            //cd = new CdInterface(this);
         }
 
-        public void Display()
-        {
-            Clientdb.DisplayAndSearch("SELECT  ID,Nom,Prenom,Cin FROM CLIENT", dataGridView);
-        }
-
-        public   ClientInterface clientInterface;
+         public   ClientInterface clientInterface;
+     public   ListeCdInterface listecd;
+     public ListeLivreInterface listelivre;
+     public ListePeriodiqueInterface listeper;
+        //   public CdInterface cd; 
         int t1 = 45;
         
 
@@ -61,6 +66,11 @@ namespace BiblioProject
         private void button2_Click(object sender, EventArgs e)
         {
 
+
+
+            //panelClient.Visible = false;
+            //listecd.ShowDialog();
+            //cd.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -155,6 +165,61 @@ namespace BiblioProject
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panelImane_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            listelivre.Visible = false;
+            listeper.Visible = false;
+            ListeCdInterface liste = new ListeCdInterface();
+            liste.TopLevel = false;
+            panel7.Controls.Add(liste);
+            liste.BringToFront();
+            liste.Show();
+
+            //liste.ShowDialog();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            listecd.Visible = false;
+            listelivre.Visible = false;
+            ListePeriodiqueInterface liste = new ListePeriodiqueInterface();
+            liste.TopLevel = false;
+            panel7.Controls.Add(liste);
+            liste.BringToFront();
+            liste.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            listecd.Visible=false;
+            listeper.Visible = false;
+            ListeLivreInterface liste = new ListeLivreInterface();
+            liste.TopLevel = false;
+            panel7.Controls.Add(liste);
+            liste.BringToFront();
+            liste.Show();
         }
     }
 }
