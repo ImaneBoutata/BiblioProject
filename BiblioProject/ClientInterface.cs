@@ -12,7 +12,6 @@ namespace BiblioProject
         {
             InitializeComponent();
             _parent = parent;
-            //_parent = parent;
         }
 
        public void UpdateInfo()
@@ -52,29 +51,9 @@ namespace BiblioProject
                 Clientdb.AddClient(c);
                 Clear();  
             }
-            //_parent.Display();
-
-
-
-
-
-
-
-
-            /* string connetionString = null;
-             MySqlConnection cnn;
-             connetionString = "server=localhost;database=bibl;uid=root;pwd=\"\";";
-             cnn = new MySqlConnection(connetionString);
-             try
-             {
-                 cnn.Open();
-                 MessageBox.Show("Connection Open ! ");
-                 cnn.Close();
-             }
-             catch (Exception ex)
-             {
-                 MessageBox.Show("Can not open connection ! ");
-             }
+            _parent.Display();
+     
+        }
 
          }
 }

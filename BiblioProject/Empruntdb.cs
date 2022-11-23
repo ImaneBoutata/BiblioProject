@@ -126,10 +126,24 @@ namespace BiblioProject
             dgv.DataSource = tbl;
             con.Close();
 
-
-
         }
 
+        public static void DisplayComboBox(string query, ComboBox c)
+        {
+           
+            MySqlConnection con = GetConnection();
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            MySqlDataReader mydr= cmd.ExecuteReader();
+           
+                while (mydr.Read())
+                {
+                    //string subj = mydr.GetString("CIN");
+                    //c.Items.Add(subj);
+                    c.Items.Add(mydr.GetString("cin")); 
+                }
+                
+        }
 
 
     }

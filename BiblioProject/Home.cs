@@ -101,7 +101,11 @@ namespace BiblioProject
 
         }
         
-       
+        private void Home_Shown(object sender, EventArgs e)
+        {
+            Display();
+            
+        }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {

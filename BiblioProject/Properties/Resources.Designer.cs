@@ -73,6 +73,16 @@ namespace BiblioProject.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ajouter_un_client {
+            get {
+                object obj = ResourceManager.GetObject("Ajouter un client", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap télécharger {
             get {
                 object obj = ResourceManager.GetObject("télécharger", resourceCulture);

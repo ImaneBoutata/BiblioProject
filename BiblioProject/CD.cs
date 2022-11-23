@@ -11,7 +11,7 @@ namespace BiblioProject
         String titre;
         String auteur;
 
-        public CD( String titre, String auteur) 
+        public CD(String titre, String auteur) 
         {
             this.titre = titre;
             this.auteur = auteur;

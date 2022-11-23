@@ -453,7 +453,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(259, 14);
+            this.label1.Location = new System.Drawing.Point(608, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 75);
             this.label1.TabIndex = 0;
