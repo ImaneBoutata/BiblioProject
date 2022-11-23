@@ -5,14 +5,15 @@ namespace BiblioProject
     public partial class ClientInterface : Form
     {
 
-        private readonly Home _parent;
+        private readonly ClientListe _parent;
        public string id, nom, prenom, CIN;
 
-        public ClientInterface(Home parent)
+        public ClientInterface(ClientListe parent)
         {
             InitializeComponent();
             _parent = parent;
         }
+      
 
        public void UpdateInfo()
         {
@@ -112,7 +113,7 @@ namespace BiblioProject
                 Clear();
                
             }
-            _parent.Display();
+           // _parent.Display();
         }
     }
 }

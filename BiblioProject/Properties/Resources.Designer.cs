@@ -83,6 +83,26 @@ namespace BiblioProject.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chercher {
+            get {
+                object obj = ResourceManager.GetObject("chercher", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loupe {
+            get {
+                object obj = ResourceManager.GetObject("loupe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap télécharger {
             get {
                 object obj = ResourceManager.GetObject("télécharger", resourceCulture);
@@ -106,6 +126,26 @@ namespace BiblioProject.Properties {
         internal static System.Drawing.Bitmap WhatsApp_Image_2022_11_19_at_18_17_08_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp_Image_2022-11-19_at_18.17.08-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2022_11_22_at_14_23_26 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2022-11-22 at 14.23.26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2022_11_23_at_10_03_55 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2022-11-23 at 10.03.55", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

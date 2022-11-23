@@ -12,12 +12,12 @@ namespace BiblioProject
 {
     public partial class Home : Form
     {
-        ClientInterface ClientInterface;
+       // ClientInterface ClientInterface;
 
         public Home()
         {
             InitializeComponent();
-            clientInterface = new ClientInterface(this);
+            //clientInterface = new ClientInterface(this);
         }
 
         public void Display()
@@ -82,10 +82,7 @@ namespace BiblioProject
         {
 
         }
-        public void Display()
-        {
-            Clientdb.DisplayAndSearch("SELECT  ID,Nom,Prenom,Cin FROM CLIENT", dataGridView);
-        }
+        
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -93,7 +90,7 @@ namespace BiblioProject
         
         private void Home_Shown(object sender, EventArgs e)
         {
-            Display();
+            //Display();
             
         }
 
@@ -114,7 +111,7 @@ namespace BiblioProject
 
         private void Home_Shown_1(object sender, EventArgs e)
         {
-            Display();
+           // Display();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -147,12 +144,17 @@ namespace BiblioProject
                if( MessageBox.Show("Vous voulez vraiment supprimer ce client ?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     Clientdb.DeleteClient(dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString());
-                    Display();
+                  //  Display();
                 }
 
 
                 return;
             }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

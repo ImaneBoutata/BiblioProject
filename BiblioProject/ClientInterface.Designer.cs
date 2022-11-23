@@ -44,7 +44,7 @@
             this.nomBox.BackColor = System.Drawing.Color.White;
             this.nomBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nomBox.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nomBox.Location = new System.Drawing.Point(565, 114);
+            this.nomBox.Location = new System.Drawing.Point(141, 199);
             this.nomBox.Name = "nomBox";
             this.nomBox.PlaceholderText = "Nom";
             this.nomBox.Size = new System.Drawing.Size(308, 38);
@@ -56,7 +56,7 @@
             this.prenomBox.BackColor = System.Drawing.Color.White;
             this.prenomBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.prenomBox.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.prenomBox.Location = new System.Drawing.Point(565, 238);
+            this.prenomBox.Location = new System.Drawing.Point(455, 199);
             this.prenomBox.Name = "prenomBox";
             this.prenomBox.PlaceholderText = "Prenom";
             this.prenomBox.Size = new System.Drawing.Size(308, 38);
@@ -67,7 +67,7 @@
             this.cinBox.BackColor = System.Drawing.Color.White;
             this.cinBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cinBox.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cinBox.Location = new System.Drawing.Point(568, 362);
+            this.cinBox.Location = new System.Drawing.Point(750, 199);
             this.cinBox.Name = "cinBox";
             this.cinBox.PlaceholderText = "CIN";
             this.cinBox.Size = new System.Drawing.Size(301, 38);

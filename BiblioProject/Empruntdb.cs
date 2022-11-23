@@ -32,14 +32,16 @@ namespace BiblioProject
 
         public static void AddEmprunt(Emprunt e)
         {
-            string sql = "INSERT INTO EMPRUNT VALUES (NULL, @dateEmprunt, @dateRetour, @client,@ouvrage)";
+            string sql = "INSERT INTO EMPRUNT VALUES (NULL, @dateEmprunt, @dateRetour, @cinClient,@titreLivre,@titreCd,@nomPeriodique)";
             MySqlConnection conn = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.Parameters.Add("@dateEmprunt", MySqlDbType.VarChar).Value = e.DateEmprunt;
             cmd.Parameters.Add("@dateRetour", MySqlDbType.VarChar).Value = e.DateRetour;
-            cmd.Parameters.Add("@client", MySqlDbType.VarChar).Value = e.Client;
-            cmd.Parameters.Add("@ouvrage", MySqlDbType.VarChar).Value = e.Ouvrage;
+            cmd.Parameters.Add("@cinClient", MySqlDbType.VarChar).Value = e.CinClient;
+            cmd.Parameters.Add("@titreLivre", MySqlDbType.VarChar).Value = e.TitreLivre;
+            cmd.Parameters.Add("@titreCd", MySqlDbType.VarChar).Value = e.TitreCd;
+            cmd.Parameters.Add("@nomPeriodique", MySqlDbType.VarChar).Value = e.NomPeriodique;
 
 
             try
@@ -61,14 +63,16 @@ namespace BiblioProject
 
         public static void UpdateEmprunt(Emprunt e, int id)
         {
-            string sql = "Update EMPRUNT SET dateEmprunt=@dateEmprunt,dateRetour=@dateRetour,client=@client,ouvrage=@ouvrage where id=@clientId";
+            string sql = "Update EMPRUNT SET dateEmprunt=@dateEmprunt,dateRetour=@dateRetour,cinClient=@cinClient,titreLivre=@titreLivre,titreCd=@titreCd,nomPeriodique=@nomPeriodique where id=@clientId";
             MySqlConnection conn = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.Parameters.Add("@dateEmprunt", MySqlDbType.VarChar).Value = e.DateEmprunt;
             cmd.Parameters.Add("@dateRetour", MySqlDbType.VarChar).Value = e.DateRetour;
-            cmd.Parameters.Add("@client", MySqlDbType.VarChar).Value = e.Client;
-            cmd.Parameters.Add("@ouvrage", MySqlDbType.VarChar).Value = e.Ouvrage;
+            cmd.Parameters.Add("@cinClient", MySqlDbType.VarChar).Value = e.CinClient;
+            cmd.Parameters.Add("@titreLivre", MySqlDbType.VarChar).Value = e.TitreLivre;
+            cmd.Parameters.Add("@titreCd", MySqlDbType.VarChar).Value = e.TitreCd;
+            cmd.Parameters.Add("@nomPeriodique", MySqlDbType.VarChar).Value = e.NomPeriodique;
 
 
             try
@@ -128,7 +132,7 @@ namespace BiblioProject
 
         }
 
-        public static void DisplayComboBox(string query, ComboBox c)
+        public static void DisplayComboBoxClient(string query, ComboBox c)
         {
            
             MySqlConnection con = GetConnection();
@@ -143,6 +147,65 @@ namespace BiblioProject
                     c.Items.Add(mydr.GetString("cin")); 
                 }
                 
+        }
+
+
+        public static void DisplayComboBoxLivre(string query, ComboBox c)
+        {
+
+            MySqlConnection con = GetConnection();
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            MySqlDataReader mydr = cmd.ExecuteReader();
+
+            while (mydr.Read())
+            {
+              
+                c.Items.Add(mydr.GetString("titre"));
+            }
+
+        }
+
+
+        public static void DisplayComboBoxCD(string query, ComboBox c)
+        {
+
+            MySqlConnection con = GetConnection();
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            MySqlDataReader mydr = cmd.ExecuteReader();
+
+            while (mydr.Read())
+            {
+
+                c.Items.Add(mydr.GetString("titre"));
+            }
+
+        }
+
+
+        public static void DisplayComboBoxPeriodique(string query, ComboBox c)
+        {
+
+            MySqlConnection con = GetConnection();
+
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            MySqlDataReader mydr = cmd.ExecuteReader();
+
+            while (mydr.Read())
+            {
+
+                c.Items.Add(mydr.GetString("nom"));
+            }
+
+        }
+
+        public static void findClient(string cin)
+        {
+            string sql = "select * from client where cin=@clientcin";
+            MySqlConnection conn = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+
         }
 
 

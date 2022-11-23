@@ -28,58 +28,149 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.livreCombo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ClientCombo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.cdCombo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.periodiqueCombo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ajouter = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.SuspendLayout();
             // 
-            // guna2Button1
+            // livreCombo
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(201, 67);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(173, 54);
-            this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "guna2Button1";
+            this.livreCombo.BackColor = System.Drawing.Color.Transparent;
+            this.livreCombo.BorderRadius = 20;
+            this.livreCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.livreCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.livreCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.livreCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.livreCombo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.livreCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.livreCombo.ItemHeight = 30;
+            this.livreCombo.Location = new System.Drawing.Point(818, 153);
+            this.livreCombo.Name = "livreCombo";
+            this.livreCombo.Size = new System.Drawing.Size(210, 36);
+            this.livreCombo.TabIndex = 4;
+            this.livreCombo.Tag = "Client";
             // 
-            // guna2ComboBox1
+            // ClientCombo
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(546, 85);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(279, 36);
-            this.guna2ComboBox1.TabIndex = 1;
-            this.guna2ComboBox1.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
+            this.ClientCombo.BackColor = System.Drawing.Color.Transparent;
+            this.ClientCombo.BorderRadius = 20;
+            this.ClientCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ClientCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ClientCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ClientCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ClientCombo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ClientCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.ClientCombo.ItemHeight = 30;
+            this.ClientCombo.Location = new System.Drawing.Point(530, 153);
+            this.ClientCombo.Name = "ClientCombo";
+            this.ClientCombo.Size = new System.Drawing.Size(210, 36);
+            this.ClientCombo.TabIndex = 5;
+            this.ClientCombo.SelectedIndexChanged += new System.EventHandler(this.ClientCombo_SelectedIndexChanged);
+            this.ClientCombo.TextChanged += new System.EventHandler(this.ClientCombo_TextChanged);
             // 
-            // comboBox1
+            // guna2DateTimePicker1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(616, 271);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 33);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.guna2DateTimePicker1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.guna2DateTimePicker1.BorderColor = System.Drawing.Color.Blue;
+            this.guna2DateTimePicker1.BorderRadius = 20;
+            this.guna2DateTimePicker1.Checked = true;
+            this.guna2DateTimePicker1.FillColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(540, 240);
+            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(261, 47);
+            this.guna2DateTimePicker1.TabIndex = 6;
+            this.guna2DateTimePicker1.Value = new System.DateTime(2022, 11, 22, 23, 6, 37, 621);
+            // 
+            // cdCombo
+            // 
+            this.cdCombo.BackColor = System.Drawing.Color.Transparent;
+            this.cdCombo.BorderRadius = 20;
+            this.cdCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cdCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cdCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cdCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cdCombo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cdCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cdCombo.ItemHeight = 30;
+            this.cdCombo.Location = new System.Drawing.Point(554, 333);
+            this.cdCombo.Name = "cdCombo";
+            this.cdCombo.Size = new System.Drawing.Size(210, 36);
+            this.cdCombo.TabIndex = 7;
+            this.cdCombo.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox3_SelectedIndexChanged);
+            // 
+            // periodiqueCombo
+            // 
+            this.periodiqueCombo.BackColor = System.Drawing.Color.Transparent;
+            this.periodiqueCombo.BorderRadius = 20;
+            this.periodiqueCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.periodiqueCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.periodiqueCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.periodiqueCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.periodiqueCombo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.periodiqueCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.periodiqueCombo.ItemHeight = 30;
+            this.periodiqueCombo.Location = new System.Drawing.Point(865, 333);
+            this.periodiqueCombo.Name = "periodiqueCombo";
+            this.periodiqueCombo.Size = new System.Drawing.Size(210, 36);
+            this.periodiqueCombo.TabIndex = 8;
+            // 
+            // ajouter
+            // 
+            this.ajouter.BackColor = System.Drawing.Color.Transparent;
+            this.ajouter.BorderColor = System.Drawing.Color.Transparent;
+            this.ajouter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ajouter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ajouter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ajouter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ajouter.FillColor = System.Drawing.Color.Transparent;
+            this.ajouter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ajouter.ForeColor = System.Drawing.Color.White;
+            this.ajouter.Location = new System.Drawing.Point(598, 421);
+            this.ajouter.Name = "ajouter";
+            this.ajouter.Size = new System.Drawing.Size(166, 48);
+            this.ajouter.TabIndex = 9;
+            this.ajouter.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2DateTimePicker2
+            // 
+            this.guna2DateTimePicker2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.guna2DateTimePicker2.BorderColor = System.Drawing.Color.Blue;
+            this.guna2DateTimePicker2.BorderRadius = 20;
+            this.guna2DateTimePicker2.Checked = true;
+            this.guna2DateTimePicker2.FillColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2DateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.guna2DateTimePicker2.Location = new System.Drawing.Point(818, 241);
+            this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
+            this.guna2DateTimePicker2.Size = new System.Drawing.Size(261, 47);
+            this.guna2DateTimePicker2.TabIndex = 10;
+            this.guna2DateTimePicker2.Value = new System.DateTime(2022, 11, 22, 23, 6, 37, 621);
+            this.guna2DateTimePicker2.ValueChanged += new System.EventHandler(this.guna2DateTimePicker2_ValueChanged);
             // 
             // EmpruntView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::BiblioProject.Properties.Resources.WhatsApp_Image_2022_11_22_at_14_23_26;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1137, 583);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.guna2ComboBox1);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.guna2DateTimePicker2);
+            this.Controls.Add(this.ajouter);
+            this.Controls.Add(this.periodiqueCombo);
+            this.Controls.Add(this.cdCombo);
+            this.Controls.Add(this.guna2DateTimePicker1);
+            this.Controls.Add(this.ClientCombo);
+            this.Controls.Add(this.livreCombo);
             this.Name = "EmpruntView";
             this.Text = "EmpruntView";
             this.Load += new System.EventHandler(this.EmpruntView_Load);
@@ -88,9 +179,12 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private ComboBox comboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox livreCombo;
+        private Guna.UI2.WinForms.Guna2ComboBox ClientCombo;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2ComboBox cdCombo;
+        private Guna.UI2.WinForms.Guna2ComboBox periodiqueCombo;
+        private Guna.UI2.WinForms.Guna2Button ajouter;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
     }
 }

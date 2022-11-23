@@ -8,22 +8,29 @@ namespace BiblioProject
 {
      class Emprunt
     {
-        DateTime dateEmprunt;
-        DateTime dateRetour;
-        Client client;
-        Ouvrage ouvrage;
+        String dateEmprunt;
+        String dateRetour;
+        String cinClient;
+        String titreLivre;
+        String titreCd;
+        String nomPeriodique;
 
-        public Emprunt(DateTime dateEmprunt, DateTime dateRetour, Client client, Ouvrage ouvrage)
+        public Emprunt(String dateEmprunt, String dateRetour, String cinClient, String titreLivre, String titreCd, String nomPeriodique)
         {
             this.dateEmprunt = dateEmprunt;
             this.dateRetour = dateRetour;
-            this.client = client;
-            this.ouvrage = ouvrage;
+            this.cinClient=cinClient;
+            this.titreLivre=titreLivre;
+            this.titreCd=titreCd;
+            this.nomPeriodique = nomPeriodique;
+            
         }
 
-        public DateTime DateEmprunt { get => dateEmprunt; set => dateEmprunt = value; }
-        public DateTime DateRetour { get => dateRetour; set => dateRetour = value; }
-        internal Client Client { get => client; set => client = value; }
-        internal Ouvrage Ouvrage { get => ouvrage; set => ouvrage = value; }
+        public String DateEmprunt { get => dateEmprunt; set => dateEmprunt = value; }
+        public String DateRetour { get => dateRetour; set => dateRetour = value; }
+        public string CinClient { get => cinClient; set => cinClient = value; }
+        public string TitreLivre { get => titreLivre; set => titreLivre = value; }
+        public string TitreCd { get => titreCd; set => titreCd = value; }
+        public string NomPeriodique { get => nomPeriodique; set => nomPeriodique = value; }
     }
 }
