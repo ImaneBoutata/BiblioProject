@@ -11,16 +11,11 @@ namespace BiblioProject
     {
 
        
-        int cote;
+        
 
-        public Ouvrage( int cote)
-        {
-         
-            this.cote = cote;
-
-        }
+      
 
      
-        public int Cote { get => cote; set => cote = value; }
+        
     }
 }

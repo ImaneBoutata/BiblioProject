@@ -63,6 +63,7 @@ namespace BiblioProject
             MySqlConnection conn = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.CommandType = System.Data.CommandType.Text;
+            cmd.Parameters.Add("@cdId", MySqlDbType.VarChar).Value = id;
             cmd.Parameters.Add("@titre", MySqlDbType.VarChar).Value = c.Titre;
             cmd.Parameters.Add("@auteur", MySqlDbType.VarChar).Value = c.Auteur;
 
@@ -70,12 +71,12 @@ namespace BiblioProject
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Updated Sucessfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Modification avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("CD not update. " + ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("CD non modifier " + ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             conn.Close();
@@ -97,12 +98,12 @@ namespace BiblioProject
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("delete it  Sucessfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("CD supprimer avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("CD not delete. " + ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("CD non supprimer " + ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             conn.Close();
@@ -119,6 +120,7 @@ namespace BiblioProject
             MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
             DataTable tbl = new DataTable();
             adp.Fill(tbl);
+            dgv.DataSource = tbl;
             con.Close();
 
 

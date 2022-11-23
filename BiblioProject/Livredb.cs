@@ -56,7 +56,7 @@ namespace BiblioProject
         }
 
 
-        public static void UpdateClient(Livre l, int id)
+        public static void UpdateLivre(Livre l, int id)
         {
             string sql = "Update LIVRE SET auteur=@auteur,titre=@titre,editeur=@editeur where id=@livreId";
             MySqlConnection conn = GetConnection();
@@ -115,8 +115,8 @@ namespace BiblioProject
             MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
             DataTable tbl = new DataTable();
             adp.Fill(tbl);
+            dgv.DataSource = tbl;
             con.Close();
-
 
 
         }
